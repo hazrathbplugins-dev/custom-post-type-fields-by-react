@@ -28,8 +28,4 @@ Post_Type_Manage_Loader::init();
 
 register_activation_hook( __FILE__, ['Post_Type_Manage_Activation', 'activate']);
 register_activation_hook( __FILE__, ['Post_Type_Manage_Deactivation', 'deactivate']);
-add_action('edit_form_after_title', function($post) {
-    if ( $post->post_type === 'hotel_room' ) {
-        echo '<div id="admin-hotel-room-option">This is a custom div after the title</div>';
-    }
-});
+
